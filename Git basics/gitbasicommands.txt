@@ -1,0 +1,19 @@
+git init  - to initialize git in the folder 
+git add - to add contents to the staging env 
+git commit -m - to commit the files/folders
+git status - to check if there are still any changes to be committed 
+git log 
+git branch local_cat - create local branch
+git checkout local_cat - switches to local 
+git branch - displays which branch we are in
+git checkout master - switches to master
+git merge local - merges the changes in local_cat to master in the local 
+
+--------------------------------------------------------------------
+Git hub 
+git hub - create new remote repo 
+git remote add origin remote repo url - adding the remote repo url aliasing origin 
+git push origin local_cat  - pushes the local_cat branch to remote 
+git pull origin master - to pull the latest changes from the remote master to local repo 
+git clone remote repo url - to clone an existing remote repo into my laptop 
+

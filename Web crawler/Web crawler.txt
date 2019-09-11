@@ -1,0 +1,125 @@
+L201 - gain access to the website
+>Web crawler - crawls the entire web page - captures all the link in a web page - stores in a file - saved urls and revisits them and captures the link on that page and iterates again 
+> web crawler proj - demo.py 
+> urllib import urlopen - store in the hmtl = urlopen(wikipedia) - print contents - html.read()
+----------------------
+L202 - 
+> html parser - extract only part of source code ex:headings 
+> install beautifulsoup(html parser) under proj interpreter 
+> from bs4 import beautifulsoup
+> use Beautifulsoup(read the html,"html.parser") - returns an object - save it in a object variable 
+> object.h1 - h1 tag elements alone comes up 
+> object.title 
+-----------------------
+L203 - Spyders 
+> queue.txt - links for the crawler to visit 
+> crawled.txt - links found in the crawled site - contains the crawled site as well 
+> compared with queue and crawled files to avoid revisting the same site again 
+-----------------------
+L204 - create directories  
+> create functions for every task in the crawler development 
+> fun - createprojdir - validate if projdir already exists - create directory os.makedirs(directoryname)
+--------------------------
+L205 - create queue and crawled 
+> function datafiles for creating  - for queue and crawled 
+> project_name, base_url args
+> for queue and crawled - os path join (projname , filename) 
+> validate again if already the files exist 
+> if not - write_file 
+> create function write_file - open and write data into the file 
+-----------------------------
+L206 - append to(queue) , delete function (crawled)
+> append function - with open(path , 'a') as  - f.write(data)
+> delete function - f = open(path, 'w') close 
+-------------------------------------
+L207 - use SET to improve performance instead of accessing the txt file located in HD 
+> function - file to set 
+> function - set to file 
+------------------------------
+L208 -  crawl the html 
+> file - link_finder - extract links 
+> from html.parser import HTMLPARSER
+> from urllib import parse
+> super() - method which can be used in the derived class to initialize parent variables in the child class instead of initializing separately 
+> linkfinder class - def init(baseurl, pageurl) - links -> set 
+> def error - def handle_starttag 
+---------------------------------
+L209 - handle_starttag
+> tag == a - > links 
+> loop through it - attribute, value in attrs 
+> if attribute = href - url join = parse.urljoin(baseurl, value)
+>add the urls to link set 
+
+def pagelinks- return links set 
+-----------------------------------
+L210 - spyder 
+> visits the first page link and then extracts the links from that page and store it in queue.txt
+> Multithreading - multiple spyders crawling 
+> spyder.py - import urlopen , import LinkFinder, from demo import *
+> class spyder - project name, base url , domain name, queue_file, crawled_file, queue, crawled set 
+> init function - initialize the variables above - boot up - self.boot() - self.crawl_page()
+-------------------------------------------
+L211-212 - boot function 
+> use the functions defined in demo 
+> use the attributes defined in Spyder file 
+> create dir - create datafiles - filetoset (queue, crawled)
+-------------
+L213 - crawl_page function 
+@staticmethod - method in a class which doesnt need any object instantiation to be accessed 
+> crawl_page function - validate if page_url its already crawled 
+> print page_url 
+> print queue set and crawled set 
+> add_links_to_queue(gather_links(page_url)) - new fun to be created
+> queue.remove
+> crawled.add
+> update_files  - new fun to be created 
+--------------------
+L214 - creating the gather_links fun 
+> make sure it contains only text/html source 
+> decode - as bytes and then as string 
+> find the links in the page url using LinkFinder 
+> feed it to the finder 
+> return finder.page_links 
+-----------------------
+L215 - Add_links_to_queue func definition 
+> links shouldnt already exist in the queue or crawled already 
+> validate the domain name 
+> add the url set to queue
+> update file fun 
+--------------------------
+L216 - domain func
+> create a new file 
+> from domain import *
+> domain.py - import urlparse 
+> def get domain name - create another func for getting the sub domain and split based on .
+> return the result 
+> def sub domain - urlparse.netloc- network location 
+----------------------------
+L217 - main.py
+> import threading 
+> from spider, demo, domain import *
+------------------------
+l218 - crawl and multithread 
+> def crawl - check if the links in queue >0 
+> create jobs - multithreads 
+> def create_jobs - use the queue - put and join and crawl again 
+------------------
+L220 - Multithreading 
+> def workers - threads 
+> t = threading.Thread(target=work)
+> t.daemon() = True -> t.start()
+
+> def work - while true 
+> url = queue.get()
+> Spyder.crawl_page(threding.current_thread().name, url)
+> queue.task_done()
+
+create_Workers() - fun call 
+crawl() - fun call
+--------------------------------------------------------
+Web crawler - Work flow 
+
+
+
+
+

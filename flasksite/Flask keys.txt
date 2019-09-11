@@ -1,0 +1,76 @@
+Flask
+L184 - Directory 
+> create flasksite folder 
+> making an virtual env helps to avoid interference 
+> cd env - cd Scripts - Activate - (env)
+> flasksite ->
+> pip install flask 
+> create dir - static(img) and template(html)
+> under static - create folders css, js, images 
+------------------------------------
+L185 - basic program in flask - triggering the local server 
+> create app.py from notepad 
+> import flask from Flask 
+> app = Flask(__name__) - @app.route('/')->def hello():return helloworld -> if __name__='__main__':app.run()
+> cmd - python app.py 
+-----------------------
+L186 - Routing / url binding - bind url to particular function 
+> @app.route('/url')
+def func :
+return 
+-------------------------
+L187 - variables 
+> profile urls - @app.route('/profile/<name>') - def profilename(name):return text
+--------------------------
+L188 - Dynamic urls 
+from flask import redirect, url_for 
+> redirect(url_for(func name, parameter))
+--------------------------
+L189 - Passing data to server from a html page 
+> create login.html file 
+> create a form in the html file 
+> <body form action = url method = post 
+  <p caption>
+  <p input text 
+  <p input submit 
+> import request in app 
+> app.route(success)
+> app.route(login, methods=[post, get])-> def login - if request.method = post -> username = request.form[name] -> return and redirect 
+> else username= request.args.get(nm) -> return and redirect to sucess url 
+----------------------
+L190 - Templates
+> segregate the html code in separate files templates 
+> create a html file in template folder 
+> import render_template module in app.py 
+> index home page routing / return render_template('template file name )
+---------------------
+L191- passing data templates 
+app.route('/welcome/<username>)
+def welcome(username)
+ return render_template('hellotemplate.html', name=username)
+> use the {{name}} in the html file 
+---------------------
+L192 - Using templates 
+> static folder - for images
+> create a js file > add a function and return a text 
+> open the hello html -> add the source of jsfile in the head tag using url_for
+> body > input type , on click, value 
+> app.route - render_template (html file name)
+
+----------------------
+L193 - passing form data to template 
+> Design a student form > student.html > action - result url 
+> route to student on /student 
+> route to result on /result - get the data from request.form- render the result template with result 
+> Create a table in result.html , loop through the result obtained using key value 
+----------------------
+L194 - Cookies 
+> route /cookies - return render_template(cookies.html)
+> cookies.html - form and submit - action - setcookies url 
+> route /setcookies - def - request.form (name) - make_response (render_template(readcookies.html)) -> reads the cookies 
+> readcookies.html - has the url to getcookies 
+> route /getcookies - name = request.cookies.get(userId) - return the name in the tags 
+
+flow - route cookies - return cookies.html -  form action setcookies and submit - submit - setcookies - route setcookies - request.form name - make_response(render readcookies.html) - resp.set_cookie(user, username) - readcookies.html - url getcookies -> route getcookies - request.cookies.get(user) - return username 
+
+----------------------------------------------------------------

@@ -1,0 +1,123 @@
+<html>
+    <head>
+        <link rel="stylesheet" type ="text/css" href="style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> <!-- bootstrap CDN-->
+    </head>
+    <body>
+        <!-- create the container and then put the row and then add the column and spanning -->
+        <!-- Grid class 1 
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6">   <!-- column 1 of the row spanning to 6 columns
+                    <div class="newDiv">
+                        Left column
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6">   <!-- column 2 of the row spanning to the remaining 6 columns 
+                    <div class="newDiv">
+                        Right column
+                    </div>
+                </div>
+            </div>
+        </div>
+    -->
+
+    <!-- Grid class 2 - Dynamic mixed columns rows 
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-8">
+                <div class="newDiv">
+                    Column1
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-4">
+                <div class="newDiv">
+                    Column2
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-8">
+                <div class="newDiv">
+                    Column3
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-4">
+                <div class="newDiv">
+                    Column4
+                </div>
+            </div>
+        </div>
+    </div>
+-->
+
+<!-- Grid class 3 - offsetting columns 
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 offset-3">
+                <div class="newDiv">
+                    Row1Col1
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="newDiv">
+                    Row2Col1
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="newDiv">
+                    Row2Col2
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="newDiv">
+                    Row2Col3
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="newDiv">
+                    Row2Col4
+                </div>
+            </div>
+        </div>
+    </div>
+-->
+
+<!-- Images alignment and resposiveness-->
+<!--
+    <div class="container"> -->
+        <!--
+        <img class="img-fluid" src = "purple.png">
+        -->
+        <!-- Align the images -->
+        <!--
+        <img class="float-right" src="purple.png">
+        
+    </div> -->
+
+    <!-- Nesting of rows and columns -->
+    <div class="container">
+        <div class = "row">
+            <div class= "col-md-3">     <!-- first row first column span 3 -->
+                <div class="row">       <!-- Nested row1-->
+                    <div class="col-md-12 newDiv"> <!-- Nested column 1 split -->
+                        Section 1
+                    </div>
+                </div>
+
+                    <div class="row">  <!-- Nested row2-->
+                        <div class="col-md-12 newDiv "> <!-- Nested column 2 split -->
+                                Section 2  
+                        </div>
+                    </div>
+            </div>
+            <div class="col-md-9">  <!-- second column span 9 -->
+                <div class="maincontent">
+                    Section3
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </body>
+</html>

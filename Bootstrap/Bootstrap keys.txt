@@ -1,0 +1,30 @@
+Bootstrap - Html , css , js framwork 
+L242 
+Bootstrap proj
+> add index.html - CDN V4.1.3 - content delivery network 
+> paste it in the head tag 
+----------
+L243 - Grid system 
+> 12 columns system - each row will also have 12 columns 
+> create a container class for the elements to be placed in the grid 
+> container(whole grid)- inside the container create a row - inside a row 12 columns can be there - place the elements on these rows or columns 
+> for elements - >container - row -12 columns 
+> div class container - div class row - div class = col-md-6 medium device spanning 6 columns 
+> another div col class spanning 6 columns
+> create 2 newDiv class under each 
+> style.css - add link to the head tag 
+> style.css - newDiv class - margin , height , background color, text align , font size 
+------------
+L244- Grid classes 
+> col - sm - small devices 
+  col - md - medium 
+  col - lg - large 
+  col - xl - xtra large devices 
+--------------
+L245 - Grid classes 2 
+> Making dynamic grids based on the screen size
+---------------
+L246 - Grid column offset 
+>     -
+    - - - -
+	<div class='col-md-6 offset-3'>

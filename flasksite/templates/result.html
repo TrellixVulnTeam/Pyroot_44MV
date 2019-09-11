@@ -1,0 +1,14 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <table border="1">
+            {% for key, value in result.items() %}   <!-- key value pair -->
+                <tr>                                 <!-- table row-->
+                    <th>{{key}}</th>                 <!-- table header -->
+                    <td>{{value}}</td>               <!-- table value -->
+                </tr>
+                {% endfor %}
+        </table>
+    </body>
+</html>

@@ -1,0 +1,65 @@
+L195
+> API  - application programmable interface 
+> Real time data provider - API - Website 
+> API is a layer interface interacting with the database of the real time data provider - processes the request from my website - API communicates with the database of the real time provider- fetches data for the request and provides to my website - No direct access to the DB but to the data through an API 
+> Request - in the form of url - httprequest/API path & API key - Response JSON output 
+----------
+L196 - Building an API
+> Using django and Django rest framework 
+> create virtual env - virtualenv renv
+> cd renv - cd scripts - activate 
+> cd API module - pip install django - pip install djangorestframework 
+> Pycharm - open virtual environment - renv folder 
+> API module > start proj rest - start app restapp 
+
+> Models - table Task - attributes - name, desc , datetime 
+> Rest api - serializer - converts the model into a json format - from djangorestframework import serializers 
+> serializers.py-> class TaskSerializers(serializers.Modelserializers) - class Meta()- for the data table and attributes
+> views - import viewsets(for dataview) - import Taskserializers(json) - import Task (data table) - class TaskViewSet - queryset=obj.all - serializer_class = TaskSerializers
+> urls for accessing api - url app - import routers - import Taskviewset 
+> router = defaultrouter - router.register(r'task', TaskViewSet)
+> add url to the router url(r'^', include(router.urls))
+> admin site register (Task) 
+
+workflow -> Models - add table and attributes -> Serializer - class serializer-class Meta - model and fields -> views-class viewset - queryset - serializerclass -> urls - routers - defaultrouter- register router with viewset - admin site register - trigger the server 
+-------------------
+L197 - API endpoints / url endpoints / 
+> add new boolean field - completed 
+> add in serializer class - add date_created field 
+> migrations 
+> viewset - new class - new queryset with filter 
+> viewset - another new class - new queryset with filter completed true 
+> urls - simplerouter - register new viewsets 
+-------------------
+L198 - Image field 
+> Images in REST API - install pillow 
+> add image field in Models - upload to - default 
+> serializer - add field - serializer.Imagefield max length, use url - add field 
+> create dir media - 
+> Settings - add media root - add media url - relative path 
+> urls.py - import static - import settings - concatenate static (mediaurl, document_root = media root)
+
+---------------------
+L199 - Filtering API content 
+> similar to completed and due - but rather advanced 
+> install filter - import filter from restframework , django_filters.rest_framework import DjanoFilterBackend
+> views - filerbackend - filter.filterbackend, filter.orderingfilter 
+> views -> filter fields , ordering - date created 
+> settings - installed apps - filter 
+> urls - comment the other2 viewsets - use default router 
+> trigger server - filter using url/task/?completed=True
+
+--------------------------
+L200 - Search functionality 
+> views -  search filter - search field
+
+------------------------
+L201 - API authentication 
+> add a permission class under the views - import is authenticated from restframework.permissions 
+> user model - registered users - django.contrib.auth import get user model 
+> new class - userserializer - password field  
+> create user method - getusermodel.object.create - validated data 
+> user.setpassword - validated data -'password' - user save - return user 
+> class meta for the userserializer - model and fields 
+> view - userview 
+> 
