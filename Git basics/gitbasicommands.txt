@@ -17,3 +17,10 @@ git push origin local_cat  - pushes the local_cat branch to remote
 git pull origin master - to pull the latest changes from the remote master to local repo 
 git clone remote repo url - to clone an existing remote repo into my laptop 
 
+---------------------------------------------------------------------
+
+Github 
+changes pushed to remote repo 
+Create pull request to Master in remote repo 
+Merge the pull request
+
