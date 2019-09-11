@@ -24,3 +24,6 @@ changes pushed to remote repo
 Create pull request to Master in remote repo 
 Merge the pull request
 
+---------------------------------------------------------------------
++ Push local_ local repo -> local_ remo repo 
+
