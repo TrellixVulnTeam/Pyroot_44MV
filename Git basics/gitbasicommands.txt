@@ -28,5 +28,4 @@ Merge the pull request
 + Push local_ local repo -> local_ remo repo 
 + Add content from vig laptop and pushing to remote repo !!!
 
-
-+ check pushing from local_cat local repo to local_cat remote local repo
++ cleaning
