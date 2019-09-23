@@ -15,7 +15,7 @@ class Students:
         self.name = input('Enter student name: ')  # setting using user input here
         self.contact = input('Enter student contact: ')
 
-    def setdata1(self,name, contact):
+    def setdata1(self, name, contact):
         print('Setting data1')
         self.name = name
         self.contact = contact
@@ -26,6 +26,7 @@ class Students:
         print('Contact: ', self.contact)
 
 # Object creation
+
 
 Vig = Students('Vig', 0) # intializes attributes with these initial values
 # Vig.getdata()  # prints the default values passed above
@@ -52,6 +53,7 @@ Vig = Students('Vig', 0) # intializes attributes with these initial values
 # David.getter()
 
 # l73 > inheritance
+
 
 class Sciencestudent(Students):  # inherits from Students
     def _init_(self,regno):    # attribute initializing
