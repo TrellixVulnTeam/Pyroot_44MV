@@ -61,5 +61,6 @@ L201 - API authentication
 > create user method - getusermodel.object.create - validated data 
 > user.setpassword - validated data -'password' - user save - return user 
 > class meta for the userserializer - model and fields 
-> view - userview 
-> 
+> view - import getusermodel, IsAuthenticated, Allowany 
+> Another viewset - userview - model - serializer- permission class 
+> urls - add urls for registeration 

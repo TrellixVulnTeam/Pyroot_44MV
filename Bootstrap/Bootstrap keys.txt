@@ -28,3 +28,11 @@ L246 - Grid column offset
 >     -
     - - - -
 	<div class='col-md-6 offset-3'>
+-------------
+L247 - Images responsive 
+> making it class img-fluid - for making it responsive
+> align images - class float 
+---------------
+L248 - Nesting of rows and columns
+> - |
+  - |
