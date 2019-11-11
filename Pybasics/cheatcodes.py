@@ -572,6 +572,36 @@ class StudentStream(Student):    # child class inheriting from parent class
 Tha = Student('Thanu', '27')    # parent class object initialization - cant access child class methods
 Tha.getter_student()
 
+# --------------------------------------
+
+# Data analysis - Jupyter notebooks
+
+# from pandas import *
+# import numpy as np
+# Series - Dataframes
+# series_num = Series([1,2,3,4,5], index=[1,2,3,4,5])# data_set = {'Name':['Vi', 'Th','Ar'],
+# data_set = {'Name':['Vi', 'Th','Ar'], 'Age':[29,27,26], 'Uni':['FAU','FAU','FAU']}
+# dataframe_set = DataFrame(data_set, index=[1,2,3,4])
+
+# ------------------
+
+# keywords #
+
+# reindex - reshuffle the index of the elements, rows
+# .T - transpose of the dataframe
+# drop - .drop(3) - .drop('column name', 1)
+# operations - series1 + series2 # needs to have the same index
+# dataframe1 - dataframe2
+# sort - sort_index, sort_index(ascending=False) , sort_values('Age', ascending = False)
+# unique - is_unique (for elements), index.is_unique(for index)
+# sum - sum(Series) , dataframe.sum()
+# idxmax, idxmin
+# np.array([]) - .reshape(x,y)
+# arange, zeros
+# linspace, logspace
+# indexing after reshaping - []array []row []column
+
+
 
 
 
