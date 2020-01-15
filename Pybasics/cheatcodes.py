@@ -1,6 +1,21 @@
 # will contain the recollection of all the concepts
 # brush up topics
 
+# Topics checklist
+# loops - if else , while, for x in range
+# List [] , append, len(), insert, index , list compre
+# File handling - filehandler = open(read/write/append mode) , filehandler.read, filehandler.write
+# try , except, finally
+# Dictionary {} - word meaning pair - give the word get meaning - in , get keyword
+# Tuples () - tuple slicing
+# string ops - .format , upper, lower, startswith , endswith , join , replace
+# lambdas template - (lambda x: x**2)(2)
+# MFG - Map(func/lambda, iterable)
+#       Filter(func/lambda, iterable)
+#       Generator - yield keyword
+# Count - Accumulate - Takewhile(lambda, iterable)
+# re - ^, $, *,{}, ?- optional, . -wild , + - atleast once
+
 # - basics -
 
 # string_input = input()
