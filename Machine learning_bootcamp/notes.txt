@@ -1,0 +1,41 @@
+virutal environment in anaconda 
+https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html
+
+
+# activating a virtual environment in Anacond 
+conda create --name fluffy python=3.5 numpy 
+                   (venv)  (package)
+
+activate fluffy
+deactivate fluffy
+
+# to get to know the environment
+conda info --envs   
+
+# activating intellisense in jupyter notebooks 
+> %config IPCompleter.greedy=True 
+
+# Section 5 - Numpy 
+> conda install numpy 
+> pip install numpy
+
+# Section 6 - Pandas 
+> conda install pandas 
+> pip install pandas 
+> shift + tab - to get the syntax completion in pandas 
+>>> for working with data sources
+> conda install sqlalchemy 
+> conda install beautifulSoup4
+> conda install lxml 
+> conda install html5lib 
+
+
+# Section 8 - Matplotlib 
+> conda install matplotlib
+> matplotlib.org/index.html
+
+# Section 9 - Seaborn 
+> conda install seaborn  / pip install seaborn 
+> 
+
+
