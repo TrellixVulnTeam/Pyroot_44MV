@@ -1,13 +1,16 @@
 virutal environment in anaconda 
 https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html
 
-
 # activating a virtual environment in Anacond 
-conda create --name fluffy python=3.5 numpy 
+conda create --name fluffy python=3.7.3 numpy 
                    (venv)  (package)
 
 activate fluffy
-deactivate fluffy
+conda deactivate
+
+
+# removing packages 
+> conda remove plotly 
 
 # to get to know the environment
 conda info --envs   
@@ -16,7 +19,7 @@ conda info --envs
 > %config IPCompleter.greedy=True 
 
 # Section 5 - Numpy 
-> conda install numpy 
+> conda install -c anaconda numpy 
 > pip install numpy
 
 # Section 6 - Pandas 
@@ -38,5 +41,16 @@ conda info --envs
 > conda install seaborn  / pip install seaborn 
 
 # Section 10 - Pandas inbuilt visualisation 
+> dataframe.plot.kind()
+
+# Section 11 - Plotly cufflinks
+ 
+> conda install -c anaconda plotly 
+> conda install -c anaconda cufflinks 
+> from plotly import __version__ 
+> import cufflinks as cf 
+> from plotly.offline import download_plotlyjs,init_notebook_mode,plot,iplot
+> init_notebook_mode(connected=True)   # connects the js to the notebook mode 
+> cf.go_offline() # having cufflinks in offline mode() 
 
 
