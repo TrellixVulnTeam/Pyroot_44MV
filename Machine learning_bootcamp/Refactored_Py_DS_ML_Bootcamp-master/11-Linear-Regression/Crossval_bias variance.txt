@@ -1,0 +1,11 @@
+# Refer chapter 2 of Statistical book 
+
+# Cross validation & Bias variance tradeoff
+
+Low Bias - Low variance -> Best in terms of a dart board explaination 
+
+
+Bias - Refers to points preferences  near the bulls eye 
+Variance - Refers to gathering of the points together irrespective of the dart circle 
+
+
