@@ -135,6 +135,27 @@ conda info --envs
 
 
 # Section 20 - SVM - Support vector machines 
+> SVM - Non probablistic binary linear classifier 
+> SVM - model where points are mapped in space - which makes examples of separate categories are divided 
+        by clear gap as wide as possible 
+        New examples are then mapped into the same space and predicted if they belong to a category 
+        based on which side of the gap they fall 
+> Blue and pink class- a line that provides a separation 
+  Lots of options of hyperplanes that can separate blue and pink training points 
+  choose the hyper plane based on the maximising the margin between two classes 
+
+# Section 21 - K Means clustering 
+> unsupervised ML algorithm 
+> K means clustering - divides unlabelled data into distinct groups such that observations 
+  within each group are similar 
+> Use elbow method to determine K 
+> use of blobs = artifical data creation 
+
+
+# Section 22 - PCA 
+# unsupervised stat learning technique 
+> used to determine the inter relationship between different features 
+> PCA is just a transformation of your data and attempts to find out what features explain the most   variance in your data.
 
 
 
