@@ -157,7 +157,16 @@ conda info --envs
 > used to determine the inter relationship between different features 
 > PCA is just a transformation of your data and attempts to find out what features explain the most   variance in your data.
 
+# Section 23 - Recommender systems 
+> Colloborative filtering - amazon recommendations based on other peoples shopping experiences to you that you might need 
+> Content based recommender - focus on the attribute of the items and gives recommendations based on the similarity between them 
+> CF
+  - Memory based colloborative filtering 
+  - Model based colloborative filtering 
 
+# Section 24 - NLP 
+> pipeline, countervectoriser,TF IDF, Naive byes method 
 
-
-	
+# Section 25 - Neural nets and deep learning 
+> Tensor flow 
+  - pip install tensor flow 
