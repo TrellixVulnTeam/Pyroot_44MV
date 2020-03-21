@@ -54,3 +54,119 @@ conda info --envs
 > cf.go_offline() # having cufflinks in offline mode() 
 
 
+# Section 14 - Intro to ML 
+
+> Supervised learning algorithms 
+  - desired output is known for an input 
+  - based on a label
+  - the network receives inputs and maps it with the output - compares for differences / errors - modifies the model accordingly 
+  
+> Machine learning process 
+  - Data acquisition(sources) -> Data cleaning(Pandas) -> Training data(70%) , Test data (30%) ->     Model training & Building -> Model testing --> Adjust model parameters -> Deploy the model 
+  - Training data - Validation data(id hyperparameters to adjust) - Test data (get the performance)
+  
+> Evaluating Performance 
+  Metrics - Accuracy , Recall, Precision , F1score 
+  - Balanced and unbalanced classes of data - impacts the metric accuracy (Dog cat image 50-50 balanced , 99-1 unbalanced)
+  - Recall - No of true +ves / No of true +ves + No of false -ves
+  - Precision - No of true +ves / No of true positives + No of false +ves
+  - Recall - finds the relevant instances in a dataset -> Precision - proportion of model saying relevant is actually relevant 
+  - F1score - Recall + Precision (Harmonic mean - because of xtreme diffs b/w recall, precision)
+    F1score= 2 * precision *recall / precision+recall 
+	
+  - Confusion Matrix - False positive(Disease scenario- patient doesnt have disease but model predicts falsely disease positive) - False negative 
+  
+> Regression Metrics 
+  - Regression predicts continous values rather than classification 
+  - Metrics - Mean abs error - Mean squared error - root mean square error 
+  - MAE - wont punish large errors 
+  - MSE - more popular - id's the error better - result in dollar square (issue)
+  - RMSE -  better than the above two 
+  - better metrics ? - depends on the situation & context - 10 $ diff for house is fine while for a candy price prediction not 
+  
+> Scikit learn package - most popular machine learning package for python
+> conda install -c scikit-learn  / pip install scikit-learn
+
+> Scikit learn process 
+  - from sklearn.family import Model 
+    from sklearn.linear_model import LinearRegression(Estimator)
+	
+  - Estimator 
+    model.fit()
+    model.fit((X,y)) -> data X and label y -> supervised learning 
+    model.fit((X)) -> data X -> unsupervised learning works with unlabeled data 
+	
+  - Supervised Estimator
+    model.predict() - predict labels y based on a new set of data X -> model.predict(X_new)
+	model.predict_proba() - 
+	model.score() - for classification or regression probs - score b/w 0 & 1 - 1 indicating larger fit 
+  
+  - Unsupervised Estimator
+    model.predict() - predict labels in clustering algorithms
+	model.transform() - transform new data into new basis 
+    model.fit_transform() - performs a fit and transform on the same input data 
+
+> scikit-learn algorithms cheatsheet 
+
+# Section 15 - LinearRegression
+> ax = sns.distplot(x, hist_kws=dict(edgecolor="k", linewidth=2)) - to make the edges visible 
+
+# Section 17 - Logistic Regression 
+> function value that returns {0,1} - classification algorithmn - uses a confusion matrix 
+> use of get_dummies to have it in only 0,1	- from pd.get_dummies()
+
+
+# Section 18 - KNN - K nearest neighbour 
+> dog vs horse example 
+> K will impact the class which the data point belong to 
+> 
+
+# Section 19 - Decision Trees and Random forests 
+> Tree method - Example of weather based features to decide whether my friend came to play 
+> Nodes, Edges, Roots, Leaves 
+> Entropy gain and Information gain are methods choosing the split 
+
+> Random forests 
+> Decision trees dont have the best predictive accuracy due to high variance 
+> By randomly leaving out candidate features(strong feature) from each split , Random forest 
+  decorrelates the trees such that the averaging process can reduce the variance of the resulting
+  model  
+> from sklearn.tree import DecisionTreeClassifier 
+
+
+# Section 20 - SVM - Support vector machines 
+> SVM - Non probablistic binary linear classifier 
+> SVM - model where points are mapped in space - which makes examples of separate categories are divided 
+        by clear gap as wide as possible 
+        New examples are then mapped into the same space and predicted if they belong to a category 
+        based on which side of the gap they fall 
+> Blue and pink class- a line that provides a separation 
+  Lots of options of hyperplanes that can separate blue and pink training points 
+  choose the hyper plane based on the maximising the margin between two classes 
+
+# Section 21 - K Means clustering 
+> unsupervised ML algorithm 
+> K means clustering - divides unlabelled data into distinct groups such that observations 
+  within each group are similar 
+> Use elbow method to determine K 
+> use of blobs = artifical data creation 
+
+
+# Section 22 - PCA 
+# unsupervised stat learning technique 
+> used to determine the inter relationship between different features 
+> PCA is just a transformation of your data and attempts to find out what features explain the most   variance in your data.
+
+# Section 23 - Recommender systems 
+> Colloborative filtering - amazon recommendations based on other peoples shopping experiences to you that you might need 
+> Content based recommender - focus on the attribute of the items and gives recommendations based on the similarity between them 
+> CF
+  - Memory based colloborative filtering 
+  - Model based colloborative filtering 
+
+# Section 24 - NLP 
+> pipeline, countervectoriser,TF IDF, Naive byes method 
+
+# Section 25 - Neural nets and deep learning 
+> Tensor flow 
+  - pip install tensor flow 
