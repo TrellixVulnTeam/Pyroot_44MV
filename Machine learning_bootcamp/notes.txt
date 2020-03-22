@@ -170,3 +170,28 @@ conda info --envs
 # Section 25 - Neural nets and deep learning 
 > Tensor flow 
   - pip install tensor flow 
+  
+# Section 26 - Spark and Big data 
+> Spark is a library used for Big data 
+> Set up AWS for using Spark 
+> Use HDFS(Hadoop distributed file systems) to distribute data of large storage 
+> one master node with multiple child nodes with 128MB(smaller blocks of data easy to parallelise) - each block of this child node is replicated 3ce to facilitate fault tolerance 
+> Mapreduce - to split the computation task to HDFS - Job tracker(Master node) and task tracker(worker nodes) 
+> job tracker sends code to task tracker - task tracker monitors the task on the worker nodes 
+
+> Spark used to handle Bigdata - Spark is similar to Mapreduce but really fast  
+> Spark RDD(Resilient Distributed dataset ) - supports - fault tolerance- multiple data source 
+- distributed data- parallel operation 
+- RDD operations - Transformation - Actions 
+- Actions - collect(returns all element of RDD) count(return number of elements) first(return the first element) take(return an array with first n elements of RDD)
+- Transformation - Filter(applies filter func to each element and returns element eval to True), Map(transforms each element and preserves n element) , Flatmap (transform each element into 0-N element and changes # elements)
+> Map - grab first letter of a list of names 
+> Flatmap - transform a corpus of text into a list of singular words 
+> Pair RDDS - Tuples values 
+> Reduce and Reduce by key
+  - Reduce - action -> agg function -> Single element 
+  - Reduce by key - action -> agg pair RDD elements -> returns a pair RDD 
+
+# AWS setup 
+> EC2 instance - SSH to connect EC2 over internet - Set up spark and jupyter on EC2 instance 
+> Vigspark Vigmachine  - newspark
