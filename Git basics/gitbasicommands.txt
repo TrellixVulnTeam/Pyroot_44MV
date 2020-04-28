@@ -13,7 +13,8 @@ git merge local - merges the changes in local_cat to master in the local
 Git hub 
 git hub - create new remote repo 
 git remote add origin remote repo url - adding the remote repo url aliasing origin 
-git push origin local_cat  - pushes the local_cat branch to remote 
+(from local_master branch) git push origin master ---- creates a master branch in github
+(from local_local_cat) git push origin local_cat  ---- pushes the local_cat branch to github, creates local_cat branch
 git pull origin master - to pull the latest changes from the remote master to local repo 
 git clone remote repo url - to clone an existing remote repo into my laptop 
 
