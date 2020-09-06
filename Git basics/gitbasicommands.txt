@@ -7,7 +7,8 @@ git branch local_cat - create local branch
 git checkout local_cat - switches to local 
 git branch - displays which branch we are in
 git checkout master - switches to master
-git merge local - merges the changes in local_cat to master in the local 
+git merge local - merges the changes in local_cat to master in the local
+git branch -d <branch name> 
 
 --------------------------------------------------------------------
 Git hub 
