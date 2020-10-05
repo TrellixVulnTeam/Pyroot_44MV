@@ -3,30 +3,30 @@
 # Mutable list
 
 
-# def list2(list1):
-#     print('got',list1)
-#     list1.append('5')
-#     print('mutated to ', list1)
-#
-# list1 = ['1', '2', '3', '4']
-#
-# print('before mutation', list1)
-# list2(list1)
-# print('after mutation', list1)
+def list2(list1):
+    print('got',list1)
+    list1.append('5')
+    print('mutated to ', list1)
+
+list1 = ['1', '2', '3', '4']
+
+print('before mutation', list1)
+list2(list1)
+print('after mutation', list1)
 
 # immutable string
 
 
-# def immu2_string(immu1_string):
-#     print('got', immu1_string)
-#     immu1_string = 'Hello'
-#     print('tried to mutate ', immu1_string)
-#
-#
-# immu1_string = 'Hi'
-# print('before trying to mutate ', immu1_string)
-# immu2_string(immu1_string)
-# print('after tried to mutate', immu1_string)
+def immu2_string(immu1_string):
+    print('got', immu1_string)
+    immu1_string = 'Hello'
+    print('tried to mutate ', immu1_string)
+
+
+immu1_string = 'Hi'
+print('before trying to mutate ', immu1_string)
+immu2_string(immu1_string)
+print('after tried to mutate', immu1_string)
 
 # *******
 
