@@ -28,7 +28,7 @@ class Students:
 # Object creation
 
 
-Vig = Students('Vig', 0) # intializes attributes with these initial values
+# Vig = Students('Vig', 0) # intializes attributes with these initial values
 # Vig.getdata()  # prints the default values passed above
 # Vig.setdata()  # sets the user input values
 # Vig.getdata()  # gets the user input values
@@ -63,7 +63,7 @@ class Sciencestudent(Students):  # inherits from Students
         print('Registration no of scistudent: ', self.regno)
 
 
-Bruce = Sciencestudent(2060)
+# Bruce = Sciencestudent(2060)
 # Bruce.getdata()  # wont work as there's nothing to get - Vig object has the data Bruce obj doesnt have any for now
 # Bruce.setdata1('Bruce', '9444')  # setting it with parameters upfront, setting with Bruce obj data
 # Bruce.getdata()  # works fine now as there is some data set
@@ -115,12 +115,12 @@ from itertools import count, accumulate, takewhile
 
 # accumulates the values of the list to previous accumulated element values and creates a list
 
-# numlist = list(range(1,6,1))
-# print(numlist)
-#
-# accumulatedlist = list(accumulate(numlist))
-# print('Accumulating the values in list')
-# print(accumulatedlist)
+numlist = list(range(1,6,1))
+print(numlist)
+
+accumulatedlist = list(accumulate(numlist))
+print('Accumulating the values in list')
+print(accumulatedlist)
 
 # takewhile similar to filter
 
