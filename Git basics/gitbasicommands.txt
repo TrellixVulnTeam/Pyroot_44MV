@@ -31,3 +31,6 @@ Merge the pull request
 + Add content from vig laptop and pushing to remote repo !!!
 
 + cleaning
+
++ Pushing from local branch(local_cat) to remote master , have the origin created at local branch and then make the push with below command 
+  git push origin local_cat:master
